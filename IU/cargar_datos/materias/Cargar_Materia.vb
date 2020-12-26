@@ -59,28 +59,33 @@ Public Class Cargar_Materia
         txt_matid.Enabled = False
 
         Dim tabla As New DataTable
-        Dim sql As String = "SELECT DISTINCT Legajo FROM Profesor"
+        Dim sql As String = "SELECT DISTINCT Legajo, Nombre FROM Profesor"
         Dim adp As New OleDbDataAdapter(sql, con)
         adp.Fill(tabla)
 
         cmb_prof.DataSource = tabla
 
         Dim tabla2 As New DataTable
-        Dim sql2 As String = "SELECT DISTINCT Id FROM Carreras"
+        Dim sql2 As String = "SELECT DISTINCT Id, Nombre FROM Carreras"
         Dim adp2 As New OleDbDataAdapter(sql2, con)
         adp2.Fill(tabla2)
 
         cmb_carr.DataSource = tabla2
 
-        'combobox1.DisplayMember = "Nombre"
-        'combobox1.ValueMember = "Documento"
+        cmb_prof.DisplayMember = "Nombre"
+        cmb_prof.ValueMember = "Legajo"
 
-        cmb_prof.DisplayMember = "Legajo"
-        cmb_prof.Text = Convert.ToString(mat.idProfe)
 
-        cmb_carr.DisplayMember = "Id"
-        cmb_carr.Text = Convert.ToString(mat.idCarrera)
 
+        cmb_carr.DisplayMember = "Nombre"
+        cmb_carr.ValueMember = "Id"
+
+
+        cmb_prof.SelectedValue = Convert.ToString(mat.idProfe)
+        cmb_carr.SelectedValue = Convert.ToString(mat.idCarrera)
+
+        Me.lbl_title.Text = "MODIFICAR DATOS DE LA MATERIA"
+        Me.Button1.Text = "Modificar"
         Me.Text = "Modificar Materia"
         matnueva = False
     End Sub
@@ -104,15 +109,15 @@ Public Class Cargar_Materia
 
         cmb_carr.DataSource = tabla2
 
-        'combobox1.DisplayMember = "Nombre"
-        'combobox1.ValueMember = "Documento"
+        cmb_prof.DisplayMember = "Nombre"
+        cmb_prof.ValueMember = "Legajo"
+        cmb_prof.SelectedIndex = -1
 
-        cmb_prof.DisplayMember = "Legajo"
-        cmb_prof.Text = Convert.ToString(mat.idProfe)
+        cmb_carr.DisplayMember = "Nombre"
+        cmb_carr.ValueMember = "Id"
+        cmb_carr.SelectedValue = -1
 
-        cmb_carr.DisplayMember = "Id"
-        cmb_carr.Text = Convert.ToString(mat.idCarrera)
-
+        Me.lbl_title.Text = "CARGAR DATOS DE LA MATERIA"
         Me.Text = "Cargar Materia"
         matnueva = True
     End Sub
@@ -179,5 +184,9 @@ Public Class Cargar_Materia
         Else
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub Cargar_Materia_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

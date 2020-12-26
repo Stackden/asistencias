@@ -26,12 +26,12 @@ Partial Class CarrerasGrid
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
-        Me.lbl = New System.Windows.Forms.Label
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.Button5 = New System.Windows.Forms.Button
         Me.Button4 = New System.Windows.Forms.Button
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
         Me.TextBox1 = New ABMAsistencia.WaterMarkTextBox
+        Me.lbl_title = New System.Windows.Forms.Label
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,18 +77,6 @@ Partial Class CarrerasGrid
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Agregar"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'lbl
-        '
-        Me.lbl.AutoSize = True
-        Me.lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.lbl.Font = New System.Drawing.Font("Calibri", 38.0!)
-        Me.lbl.ForeColor = System.Drawing.Color.White
-        Me.lbl.Location = New System.Drawing.Point(43, 22)
-        Me.lbl.Name = "lbl"
-        Me.lbl.Size = New System.Drawing.Size(433, 63)
-        Me.lbl.TabIndex = 28
-        Me.lbl.Text = "CARGAR CARRERAS"
         '
         'PictureBox1
         '
@@ -151,16 +139,30 @@ Partial Class CarrerasGrid
         Me.TextBox1.WaterMarkColor = System.Drawing.Color.Gray
         Me.TextBox1.WaterMarkText = "Ingrese un valor para buscar en el registro"
         '
+        'lbl_title
+        '
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 38.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(0, 0)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(514, 101)
+        Me.lbl_title.TabIndex = 34
+        Me.lbl_title.Text = "LISTA DE CARRERAS"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'CarrerasGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(514, 461)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.lbl)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -179,10 +181,10 @@ Partial Class CarrerasGrid
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents lbl As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents TextBox1 As ABMAsistencia.WaterMarkTextBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
 End Class

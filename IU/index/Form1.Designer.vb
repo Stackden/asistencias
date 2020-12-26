@@ -34,13 +34,13 @@ Partial Class Form1
         Me.Button8 = New System.Windows.Forms.Button
         Me.Button9 = New System.Windows.Forms.Button
         Me.btn_tomar_asistencias = New System.Windows.Forms.Button
-        Me.lbl = New System.Windows.Forms.Label
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.PictureBox3 = New System.Windows.Forms.PictureBox
-        Me.Label1 = New System.Windows.Forms.Label
         Me.btn_consultar = New System.Windows.Forms.Button
         Me.btn_Cargar_Datos = New System.Windows.Forms.Button
+        Me.lbl_title = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
         Me.TabPage3.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
@@ -162,18 +162,6 @@ Partial Class Form1
         Me.btn_tomar_asistencias.Text = "TOMAR ASISTENCIA"
         Me.btn_tomar_asistencias.UseVisualStyleBackColor = False
         '
-        'lbl
-        '
-        Me.lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(185, Byte), Integer))
-        Me.lbl.Font = New System.Drawing.Font("Calibri", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl.ForeColor = System.Drawing.Color.White
-        Me.lbl.Location = New System.Drawing.Point(35, 9)
-        Me.lbl.Name = "lbl"
-        Me.lbl.Size = New System.Drawing.Size(434, 78)
-        Me.lbl.TabIndex = 24
-        Me.lbl.Text = "ASISTENCIAS"
-        Me.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
@@ -206,18 +194,6 @@ Partial Class Form1
         Me.PictureBox3.TabIndex = 27
         Me.PictureBox3.TabStop = False
         '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.DimGray
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 28.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(68, 401)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(379, 51)
-        Me.Label1.TabIndex = 24
-        Me.Label1.Text = "TESIS SOFTWARE III"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'btn_consultar
         '
         Me.btn_consultar.BackColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(120, Byte), Integer))
@@ -244,15 +220,44 @@ Partial Class Form1
         Me.btn_Cargar_Datos.Text = "CARGAR DATOS"
         Me.btn_Cargar_Datos.UseVisualStyleBackColor = False
         '
+        'lbl_title
+        '
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 45.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(0, 0)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(514, 101)
+        Me.lbl_title.TabIndex = 36
+        Me.lbl_title.Text = "ASISTENCIAS"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.BackColor = System.Drawing.Color.DimGray
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 28.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(0, 386)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(514, 75)
+        Me.Label2.TabIndex = 37
+        Me.Label2.Text = "TESIS SOFTWARE III"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(514, 461)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lbl)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btn_Cargar_Datos)
         Me.Controls.Add(Me.btn_consultar)
@@ -283,12 +288,12 @@ Partial Class Form1
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents btn_tomar_asistencias As System.Windows.Forms.Button
-    Private WithEvents lbl As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Private WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btn_consultar As System.Windows.Forms.Button
     Friend WithEvents btn_Cargar_Datos As System.Windows.Forms.Button
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class

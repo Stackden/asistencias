@@ -29,10 +29,10 @@ Partial Class Cargar_Datos
         Me.ts_preceptores = New System.Windows.Forms.ToolStripButton
         Me.ts_materias = New System.Windows.Forms.ToolStripButton
         Me.ts_carreras = New System.Windows.Forms.ToolStripButton
-        Me.lbl = New System.Windows.Forms.Label
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.PictureBox3 = New System.Windows.Forms.PictureBox
+        Me.lbl_title = New System.Windows.Forms.Label
         Me.Toolstrip.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,18 +108,6 @@ Partial Class Cargar_Datos
         Me.ts_carreras.Text = "Carreras"
         Me.ts_carreras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'lbl
-        '
-        Me.lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(185, Byte), Integer))
-        Me.lbl.Font = New System.Drawing.Font("Calibri", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl.ForeColor = System.Drawing.Color.White
-        Me.lbl.Location = New System.Drawing.Point(33, 9)
-        Me.lbl.Name = "lbl"
-        Me.lbl.Size = New System.Drawing.Size(434, 78)
-        Me.lbl.TabIndex = 22
-        Me.lbl.Text = "CARGAR DATOS"
-        Me.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.ABMAsistencia.My.Resources.Resources.carena
@@ -152,14 +140,29 @@ Partial Class Cargar_Datos
         Me.PictureBox3.TabIndex = 26
         Me.PictureBox3.TabStop = False
         '
+        'lbl_title
+        '
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 45.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(0, 0)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(514, 101)
+        Me.lbl_title.TabIndex = 35
+        Me.lbl_title.Text = "CARGAR DATOS"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Cargar_Datos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(514, 461)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.lbl)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Toolstrip)
         Me.Controls.Add(Me.PictureBox3)
@@ -186,5 +189,5 @@ Partial Class Cargar_Datos
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Toolstrip As System.Windows.Forms.ToolStrip
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Private WithEvents lbl As System.Windows.Forms.Label
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
 End Class

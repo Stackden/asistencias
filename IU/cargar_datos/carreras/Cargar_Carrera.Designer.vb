@@ -22,6 +22,7 @@ Partial Class Cargar_Carrera
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cargar_Carrera))
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
         Me.txt_name_carr = New System.Windows.Forms.TextBox
@@ -33,7 +34,7 @@ Partial Class Cargar_Carrera
         Me.Label3 = New System.Windows.Forms.Label
         Me.txt_id = New System.Windows.Forms.TextBox
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.Label4 = New System.Windows.Forms.Label
+        Me.lbl_title = New System.Windows.Forms.Label
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -161,17 +162,19 @@ Partial Class Cargar_Carrera
         Me.PictureBox2.TabIndex = 32
         Me.PictureBox2.TabStop = False
         '
-        'Label4
+        'lbl_title
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 18.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(55, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(236, 29)
-        Me.Label4.TabIndex = 33
-        Me.Label4.Text = "DATOS DE LA CARRERA"
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 17.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(-2, -4)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(352, 53)
+        Me.lbl_title.TabIndex = 34
+        Me.lbl_title.Text = "DATOS DE LA CARRERA"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Cargar_Carrera
         '
@@ -180,7 +183,7 @@ Partial Class Cargar_Carrera
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(348, 304)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.combobox1)
         Me.Controls.Add(Me.Label2)
@@ -193,6 +196,7 @@ Partial Class Cargar_Carrera
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Cargar_Carrera"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -213,5 +217,5 @@ Partial Class Cargar_Carrera
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txt_id As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
 End Class

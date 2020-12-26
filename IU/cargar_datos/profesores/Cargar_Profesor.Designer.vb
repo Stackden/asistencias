@@ -22,14 +22,15 @@ Partial Class Cargar_Profesor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cargar_Profesor))
         Me.txt_name_prof = New System.Windows.Forms.TextBox
         Me.lbl_name = New System.Windows.Forms.Label
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
         Me.txt_legajo = New System.Windows.Forms.TextBox
         Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
+        Me.lbl_title = New System.Windows.Forms.Label
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -105,18 +106,6 @@ Partial Class Cargar_Profesor
         Me.Label2.TabIndex = 28
         Me.Label2.Text = "Legajo:"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 18.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(61, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(229, 29)
-        Me.Label1.TabIndex = 29
-        Me.Label1.Text = "DATOS DEL PROFESOR"
-        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
@@ -127,6 +116,20 @@ Partial Class Cargar_Profesor
         Me.PictureBox2.TabIndex = 30
         Me.PictureBox2.TabStop = False
         '
+        'lbl_title
+        '
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 17.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(-2, -4)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(352, 53)
+        Me.lbl_title.TabIndex = 33
+        Me.lbl_title.Text = "DATOS DEL PROFESOR"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Cargar_Profesor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -134,7 +137,7 @@ Partial Class Cargar_Profesor
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(348, 212)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.txt_legajo)
         Me.Controls.Add(Me.Label2)
@@ -143,6 +146,7 @@ Partial Class Cargar_Profesor
         Me.Controls.Add(Me.txt_name_prof)
         Me.Controls.Add(Me.lbl_name)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Cargar_Profesor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -158,6 +162,6 @@ Partial Class Cargar_Profesor
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents txt_legajo As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
 End Class

@@ -54,6 +54,8 @@ Public Class Cargar_Preceptor
         txt_name_prece.Text = prece.nombre
         txt_doc.Enabled = False
 
+        Me.lbl_title.Text = "MODIFICAR DATOS DEL PRECEPTOR"
+        Me.Button1.Text = "Modificar"
         Me.Text = "Modificar Preceptor"
         precenuevo = False
     End Sub
@@ -63,7 +65,8 @@ Public Class Cargar_Preceptor
         txt_doc.Text = ""
         txt_name_prece.Text = ""
 
-        Me.Text = "Agregar Profesor"
+        Me.lbl_title.Text = "AGREGAR DATOS DEL PRECEPTOR"
+        Me.Text = "Agregar Preceptor"
         precenuevo = True
     End Sub
 

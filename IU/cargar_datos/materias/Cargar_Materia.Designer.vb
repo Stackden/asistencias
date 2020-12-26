@@ -22,6 +22,7 @@ Partial Class Cargar_Materia
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cargar_Materia))
         Me.cmb_prof = New System.Windows.Forms.ComboBox
         Me.Label3 = New System.Windows.Forms.Label
         Me.txt_nom_mat = New System.Windows.Forms.TextBox
@@ -33,9 +34,9 @@ Partial Class Cargar_Materia
         Me.txt_matid = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.Label6 = New System.Windows.Forms.Label
         Me.txt_canthor = New System.Windows.Forms.TextBox
         Me.Label2 = New System.Windows.Forms.Label
+        Me.lbl_title = New System.Windows.Forms.Label
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -161,18 +162,6 @@ Partial Class Cargar_Materia
         Me.PictureBox2.TabIndex = 43
         Me.PictureBox2.TabStop = False
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 18.0!)
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(50, 9)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(234, 29)
-        Me.Label6.TabIndex = 44
-        Me.Label6.Text = "DATOS DE LA MATERIA"
-        '
         'txt_canthor
         '
         Me.txt_canthor.BackColor = System.Drawing.Color.Silver
@@ -194,6 +183,20 @@ Partial Class Cargar_Materia
         Me.Label2.TabIndex = 39
         Me.Label2.Text = "Cantidad de Horas:"
         '
+        'lbl_title
+        '
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 17.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(-2, -4)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(352, 53)
+        Me.lbl_title.TabIndex = 45
+        Me.lbl_title.Text = "DATOS DE LA MATERIA"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Cargar_Materia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -201,7 +204,7 @@ Partial Class Cargar_Materia
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(348, 360)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.cmb_carr)
         Me.Controls.Add(Me.cmb_prof)
@@ -216,6 +219,7 @@ Partial Class Cargar_Materia
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Cargar_Materia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -236,7 +240,7 @@ Partial Class Cargar_Materia
     Friend WithEvents txt_matid As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txt_canthor As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
 End Class

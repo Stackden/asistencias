@@ -56,6 +56,9 @@ Public Class Cargar_Alumno
             rb_cdt2.Checked = True
         End If
 
+
+        Me.lbl_title.Text = "MODIFICAR DATOS DEL ALUMNO"
+        Me.Button1.Text = "Modificar"
         Me.Text = "Modificar Alumno"
         alumnuevo = False
     End Sub
@@ -66,6 +69,7 @@ Public Class Cargar_Alumno
         txt_name_al.Text = ""
         txt_domic_al.Text = ""
 
+        Me.lbl_title.Text = "CARGAR DATOS DEL ALUMNO"
         Me.Text = "Agregar Alumno"
         alumnuevo = True
     End Sub

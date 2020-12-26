@@ -1,9 +1,17 @@
 ﻿Imports System.Data.OleDb
 Public Class Cargar_Carrera
     Private carr_ As New carreras
+    Private prec_ As New Preceptores
     Private carrnueva_ As Boolean
     Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=..\\..\Access\asistencias.accdb;Persist Security Info=False;")
-
+    Public Property prec() As Preceptores
+        Get
+            Return prec_
+        End Get
+        Set(ByVal value As Preceptores)
+            prec_ = value
+        End Set
+    End Property
     Public Property carr() As carreras
         Get
             Return carr_
@@ -59,19 +67,19 @@ Public Class Cargar_Carrera
         txt_id.Enabled = False
 
         Dim tabla As New DataTable
-        Dim sql As String = "SELECT DISTINCT Documento FROM Preceptor"
+        Dim sql As String = "SELECT DISTINCT documento, nombre FROM Preceptor"
         Dim adp As New OleDbDataAdapter(sql, con)
         adp.Fill(tabla)
 
         combobox1.DataSource = tabla
 
-        'combobox1.DisplayMember = "Nombre"
-        'combobox1.ValueMember = "Documento"
+        combobox1.DisplayMember = "Nombre"
+        combobox1.ValueMember = "Documento"
 
-        combobox1.DisplayMember = "Documento"
-        combobox1.Text = Convert.ToString(carr.idPreceptor)
+        combobox1.SelectedValue = Convert.ToString(carr.idPreceptor)
 
-
+        Me.lbl_title.Text = "MODIFICAR DATOS DE LA CARRERA"
+        Me.Button1.Text = "Modificar"
         Me.Text = "Modificar Carrera"
         carrnueva = False
     End Sub
@@ -82,19 +90,18 @@ Public Class Cargar_Carrera
         AddHandler Me.Load, AddressOf agregando
 
         Dim tabla As New DataTable
-        Dim sql As String = "SELECT DISTINCT Documento FROM Preceptor"
+        Dim sql As String = "SELECT DISTINCT Documento, nombre FROM Preceptor"
         Dim adp As New OleDbDataAdapter(sql, con)
         adp.Fill(tabla)
-
         combobox1.DataSource = tabla
 
-        'combobox1.DisplayMember = "Nombre"
-        'combobox1.ValueMember = "Documento"
 
-        combobox1.DisplayMember = "Documento"
-        combobox1.Text = Convert.ToString(carr.idPreceptor)
+        combobox1.ValueMember = "Documento"
+        combobox1.DisplayMember = "nombre"
+        combobox1.SelectedIndex = -1
 
-        Me.Text = "Agregar Carrera"
+        Me.lbl_title.Text = "CARGAR DATOS DE LA CARRERA"
+        Me.Text = "Cargar Carrera"
         carrnueva = True
     End Sub
     Function cambia(ByVal cambiatext As String) As String
@@ -130,7 +137,7 @@ Public Class Cargar_Carrera
 
         carr.nombre = txt_name_carr.Text
         carr.anio = txt_anio_carr.Text
-        carr.idPreceptor = combobox1.Text
+        carr.idPreceptor = combobox1.SelectedValue
         carr.carrid = txt_id.Text
 
 
@@ -174,4 +181,10 @@ Public Class Cargar_Carrera
             e.Handled = True
         End If
     End Sub
+
+    Private Sub Cargar_Carrera_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+
 End Class

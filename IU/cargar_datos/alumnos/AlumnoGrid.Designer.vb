@@ -27,11 +27,11 @@ Partial Class AlumnoGrid
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
-        Me.lbl = New System.Windows.Forms.Label
         Me.Button4 = New System.Windows.Forms.Button
         Me.Button5 = New System.Windows.Forms.Button
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.TextBox1 = New ABMAsistencia.WaterMarkTextBox
+        Me.lbl_title = New System.Windows.Forms.Label
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -90,18 +90,6 @@ Partial Class AlumnoGrid
         Me.Button1.Text = "Agregar"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'lbl
-        '
-        Me.lbl.AutoSize = True
-        Me.lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.lbl.Font = New System.Drawing.Font("Calibri", 38.0!)
-        Me.lbl.ForeColor = System.Drawing.Color.White
-        Me.lbl.Location = New System.Drawing.Point(36, 20)
-        Me.lbl.Name = "lbl"
-        Me.lbl.Size = New System.Drawing.Size(431, 63)
-        Me.lbl.TabIndex = 24
-        Me.lbl.Text = "CARGAR ALUMNOS"
-        '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
@@ -153,16 +141,30 @@ Partial Class AlumnoGrid
         Me.TextBox1.WaterMarkColor = System.Drawing.Color.Gray
         Me.TextBox1.WaterMarkText = "Ingrese un valor para buscar en el registro"
         '
+        'lbl_title
+        '
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 38.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(0, 0)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(514, 101)
+        Me.lbl_title.TabIndex = 33
+        Me.lbl_title.Text = "LISTA DE ALUMNOS"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'AlumnoGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(514, 461)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.lbl)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -183,8 +185,8 @@ Partial Class AlumnoGrid
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents lbl As System.Windows.Forms.Label
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As ABMAsistencia.WaterMarkTextBox
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
 End Class

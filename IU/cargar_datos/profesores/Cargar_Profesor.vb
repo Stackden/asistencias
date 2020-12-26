@@ -56,6 +56,8 @@ Public Class Cargar_Profesor
         txt_name_prof.Text = prof.nombre
         txt_legajo.Enabled = False
 
+        Me.lbl_title.Text = "MODIFICAR DATOS DEL PROFESOR"
+        Me.Button1.Text = "Modificar"
         Me.Text = "Modificar Profesor"
         profnuevo = False
     End Sub
@@ -65,6 +67,7 @@ Public Class Cargar_Profesor
         txt_legajo.Text = ""
         txt_name_prof.Text = ""
 
+        Me.lbl_title.Text = "AGREGAR DATOS DEL PROFESOR"
         Me.Text = "Agregar Profesor"
         profnuevo = True
     End Sub

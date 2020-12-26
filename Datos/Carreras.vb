@@ -56,6 +56,7 @@ Public Class carreras
     Public Sub Listar(ByVal grilla As DataGridView)
         Abrir()
         Dim strComando As String = "SELECT * FROM Carreras"
+        
         Dim comando As New OleDbCommand(strComando, conexion)
         Dim tabla As New DataTable
 

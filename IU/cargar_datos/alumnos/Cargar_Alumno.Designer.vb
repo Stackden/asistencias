@@ -22,6 +22,7 @@ Partial Class Cargar_Alumno
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cargar_Alumno))
         Me.lbl_doc = New System.Windows.Forms.Label
         Me.txt_doc_al = New System.Windows.Forms.TextBox
         Me.txt_name_al = New System.Windows.Forms.TextBox
@@ -39,7 +40,7 @@ Partial Class Cargar_Alumno
         Me.Button1 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.lbl_title = New System.Windows.Forms.Label
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -241,17 +242,19 @@ Partial Class Cargar_Alumno
         Me.PictureBox2.TabIndex = 31
         Me.PictureBox2.TabStop = False
         '
-        'Label1
+        'lbl_title
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 18.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(65, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(216, 29)
-        Me.Label1.TabIndex = 32
-        Me.Label1.Text = "DATOS DEL ALUMNO"
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 17.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(-2, -4)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(352, 53)
+        Me.lbl_title.TabIndex = 32
+        Me.lbl_title.Text = "DATOS DEL ALUMNO"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Cargar_Alumno
         '
@@ -260,7 +263,7 @@ Partial Class Cargar_Alumno
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(348, 351)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -275,9 +278,9 @@ Partial Class Cargar_Alumno
         Me.Controls.Add(Me.txt_doc_al)
         Me.Controls.Add(Me.lbl_doc)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Cargar_Alumno"
-        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cargar Alumno"
         Me.Panel1.ResumeLayout(False)
@@ -306,5 +309,5 @@ Partial Class Cargar_Alumno
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
 End Class

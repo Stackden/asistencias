@@ -22,6 +22,7 @@ Partial Class Cargar_Preceptor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cargar_Preceptor))
         Me.txt_name_prece = New System.Windows.Forms.TextBox
         Me.lbl_name = New System.Windows.Forms.Label
         Me.txt_doc = New System.Windows.Forms.TextBox
@@ -29,7 +30,7 @@ Partial Class Cargar_Preceptor
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.Label2 = New System.Windows.Forms.Label
+        Me.lbl_title = New System.Windows.Forms.Label
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -114,17 +115,19 @@ Partial Class Cargar_Preceptor
         Me.PictureBox2.TabIndex = 32
         Me.PictureBox2.TabStop = False
         '
-        'Label2
+        'lbl_title
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 18.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(50, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(239, 29)
-        Me.Label2.TabIndex = 33
-        Me.Label2.Text = "DATOS DEL PRECEPTOR"
+        Me.lbl_title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.lbl_title.Font = New System.Drawing.Font("Calibri", 17.0!)
+        Me.lbl_title.ForeColor = System.Drawing.Color.White
+        Me.lbl_title.Location = New System.Drawing.Point(-2, -4)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(352, 53)
+        Me.lbl_title.TabIndex = 34
+        Me.lbl_title.Text = "DATOS DEL PRECEPTOR"
+        Me.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Cargar_Preceptor
         '
@@ -133,7 +136,7 @@ Partial Class Cargar_Preceptor
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(348, 212)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -142,6 +145,7 @@ Partial Class Cargar_Preceptor
         Me.Controls.Add(Me.txt_name_prece)
         Me.Controls.Add(Me.lbl_name)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Cargar_Preceptor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -158,5 +162,5 @@ Partial Class Cargar_Preceptor
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lbl_title As System.Windows.Forms.Label
 End Class
